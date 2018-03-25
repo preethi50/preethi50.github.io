@@ -5,7 +5,7 @@
   "background_color": "#2196f3",
   "display": "minimal-ui",
   "Scope": ".",
-  "start_url": "/webapp.html",
+  "start_url": "/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
