@@ -1,0 +1,96 @@
+<html>
+<head>
+  
+<link rel="manifest" href="manifest.json"/>
+<style>
+body {
+    background-image: url("https://2a3l492ktbcc3r9jj71zjmcv-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/salad-2068220_1920-1.jpg");
+    background-repeat: no-repeat;
+   color:goldenrod;
+    width:1000px;
+height:700px;
+    
+}
+</style>
+
+<script language="JavaScript">
+
+function validateForm() {
+var legal_name=/^[A-Za-z]+$/
+    var numbers = /^[0-9]+$/;
+var legal_address=/^[0-9A-Za-z]+$/
+    var fname = document.forms["resform"]["firstname"].value;
+    var lname=document.forms["resform"]["lastname"].value;
+    var mob=document.forms["resform"]["mobileno"].value;
+var address=document.forms["resform"]["address"].value;
+    if (fname == ""|| !fname.match(legal_name)) {
+        alert("invalid firstname");
+        return false;
+    }
+    if (lname == ""|| !lname.match(legal_name)) {
+        alert("invalid lastname");
+        return false;
+    }
+   
+if(address=="" || !address.match(legal_address))
+{
+alert("invalid address field!");
+return false;
+}
+ if (mob == ""|| !mob.match(numbers)) {
+        alert("invalid mobileno");
+        return false;
+    }
+    return true;
+    
+    }
+
+
+
+</script>
+</head>
+
+<h1> RESERVATION FORM </h1>
+
+<table cellpadding="10" align="center">
+
+<form name="resform" method="post" action="" onsubmit="return validateForm()">
+<tr><td><h2>First Name</h2></td><td>
+<input type="text" name="firstname"/></td>
+</tr>
+<tr><td><h2>Last Name</h2></td><td>
+<input type="text" name="lastname"/></td>
+</tr>
+<tr><td><h2>Address</h2></td><td>
+<textarea  name="address"></textarea></td>
+</tr>
+<tr><td><h2>Mobile no</h2></td><td>
+<input type="text" name="mobileno"/></td>
+</tr>
+<tr><td><h2>Seats</h2></td><td>
+<select>
+  <option name="seats" value="2">2</option>
+  <option name="seats" value="3">3</option>
+  <option name="seats" value="4">4</option>
+  <option name="seats" value="5">5</option>
+  <option name="seats" value="above 5">above 5</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><h2>Type</h2></td>
+<td><h2><input type="radio" name="type"/>AC &nbsp <input type="radio" name="type"/>Non AC</h2></td>
+</tr>
+<tr>
+<td><h2>Date</h2></td><td><input type="date" name="date"</td>
+</tr>
+<tr>
+<td><h2>Time</h2></td><td><input type="time" name="time" </td>
+</tr>
+<tr>
+<td><input type="submit" value="submit" /><td>
+</tr>
+</form>
+</table>
+<script type="text/javascript" src="/js/myjs.js"></script>
+</html>
